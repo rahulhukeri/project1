@@ -1,0 +1,22 @@
+name: Run Hello Script Every Hour
+
+on:
+  schedule:
+    - cron: '0 * * * *'  # Runs at the start of every hour
+  workflow_dispatch:  # Allows you to manually trigger it for testing
+
+jobs:
+  run-script:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+    
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+    
+    - name: Run hello.py
+      run: python hello.py
