@@ -9,3 +9,4 @@ print(a);
 print(b);
 print(c);
 print("end of script");
+print("this is a test");
