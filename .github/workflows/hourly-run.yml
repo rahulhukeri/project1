@@ -2,7 +2,7 @@ name: Run Hello Script Every Hour
 
 on:
   schedule:
-    - cron: '0 * * * *'  # Runs at the start of every hour
+    # - cron: '0 * * * *'  # Runs at the start of every hour - DISABLED
   workflow_dispatch:  # Allows you to manually trigger it for testing
 
 jobs:
